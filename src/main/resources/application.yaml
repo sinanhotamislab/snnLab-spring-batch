@@ -1,0 +1,25 @@
+spring:
+  batch:
+    job:
+      enabled: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    primary:
+      jdbcUrl: jdbc:h2:mem:testdb
+      username: snnLab
+      password: 1234
+      driverClassName: org.h2.Driver
+    secondary:
+      jdbcUrl: secondary db jdbcUrl
+      username: secondary db username
+      password: secondary db password
+      driverClassName: secondary db driver class name
+
+scheduling:
+  isScheduled: true
+  cronExpression:
+    singleF2FJob: "*/30 * * * * *"
+    d2FJob: "*/30 * * * * *"
